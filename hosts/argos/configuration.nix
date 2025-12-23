@@ -69,7 +69,8 @@
     arcane = {
       isNormalUser = true;
       openssh.authorizedKeys.keys = [
-        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAII+hCGzLCLv0GGX0/bdXT0NFzLdxuV2lsaRAevR5Cs7S davidcorcorandublin@gmail.com"
+        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAII+hCGzLCLv0GGX0/bdXT0NFzLdxuV2lsaRAevR5Cs7S wsl"
+        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIhDJCKsbYDnCMm6NI4NRpxns9nXGH/pFXj2as89c35P laptop"
       ];
       extraGroups = ["wheel"];
     };
