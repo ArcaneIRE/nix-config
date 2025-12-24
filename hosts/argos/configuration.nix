@@ -107,9 +107,23 @@
   # Enable the OpenSSH daemon.
   services.openssh = {
     enable = true;
+    ports = [ 2022 ];
     settings = {
       PermitRootLogin = "no";
       PasswordAuthentication = false;
+    };
+  };
+
+  services.fail2ban = {
+    enable = true;
+    maxretry = 3;
+    ignoreIP = [
+      # Whitelist some subnets
+      "10.0.0.0/8" "172.16.0.0/12" "192.168.0.0/16"
+      "8.8.8.8" # whitelist a specific IP
+    ];
+    jails = {
+      # extra jails if needed (nixos module provides default jail for ssh)
     };
   };
 
